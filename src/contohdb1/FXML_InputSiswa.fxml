@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="contohdb1.FXML_InputSiswaController">
+   <children>
+      <Label layoutX="190.0" layoutY="65.0" text="NPM">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="186.0" layoutY="125.0" text="Nama">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="182.0" layoutY="191.0" text="Alamat">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNpm" layoutX="270.0" layoutY="65.0" />
+      <TextField fx:id="txtNama" layoutX="270.0" layoutY="125.0" />
+      <TextField fx:id="txtAlamat" layoutX="270.0" layoutY="191.0" />
+      <Button fx:id="btnSimpan" layoutX="154.0" layoutY="266.0" mnemonicParsing="false" onAction="#simpanKlik" text="Simpan" />
+      <Button fx:id="btnBatal" layoutX="272.0" layoutY="266.0" mnemonicParsing="false" onAction="#batalKlik" text="Batal" />
+      <Button fx:id="btnKeluar" layoutX="369.0" layoutY="266.0" mnemonicParsing="false" onAction="#keluarKlik" text="Keluar" />
+   </children>
+</AnchorPane>

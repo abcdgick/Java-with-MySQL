@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="contohdb1.FXML_InputNilaiController">
+   <children>
+      <Label layoutX="150.0" layoutY="50.0" text="NPM">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="150.0" layoutY="100.0" text="Kode MK">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="150.0" layoutY="200.0" text="Nilai">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="150.0" layoutY="150.0" text="Tanggal">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="150.0" layoutY="250.0" text="Hadir">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNPM" layoutX="271.0" layoutY="50.0" />
+      <TextField fx:id="txtKodeMK" layoutX="271.0" layoutY="100.0" />
+      <TextField fx:id="txtNilai" layoutX="271.0" layoutY="200.0" />
+      <Button fx:id="btnBatal" layoutX="279.0" layoutY="307.0" mnemonicParsing="false" onAction="#batalKlik" text="Batal" />
+      <Button fx:id="btnSimpan" layoutX="122.0" layoutY="307.0" mnemonicParsing="false" onAction="#simpanKlik" text="Simpan" />
+      <Button fx:id="btnKeluar" layoutX="420.0" layoutY="307.0" mnemonicParsing="false" onAction="#keluarKlik" text="Keluar" />
+      <DatePicker fx:id="dateTanggal" layoutX="271.0" layoutY="150.0" prefHeight="25.0" prefWidth="149.0" />
+      <Slider fx:id="sldHadir" layoutX="271.0" layoutY="256.0" prefHeight="14.0" prefWidth="149.0" />
+      <Label fx:id="lblHadir" layoutX="431.0" layoutY="254.0" text="0" />
+   </children>
+</AnchorPane>
