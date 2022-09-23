@@ -22,5 +22,6 @@
       <Button fx:id="btnUbah" layoutX="358.0" layoutY="345.0" mnemonicParsing="false" onAction="#ubahKlik" text="Ubah" />
       <Button fx:id="btnAkhir" layoutX="478.0" layoutY="303.0" mnemonicParsing="false" onAction="#akhirKlik" text="Akhir" />
       <Button fx:id="btnKeluar" layoutX="475.0" layoutY="345.0" mnemonicParsing="false" onAction="#keluarKlik" text="Keluar" />
+      <TextField fx:id="txtTotal" editable="false" layoutX="276.0" layoutY="303.0" prefHeight="25.0" prefWidth="63.0" />
    </children>
 </AnchorPane>

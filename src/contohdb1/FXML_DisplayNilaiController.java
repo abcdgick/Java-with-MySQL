@@ -7,7 +7,6 @@ package contohdb1;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Date;
-import java.util.Observable;
 import java.util.ResourceBundle;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -21,6 +20,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -35,6 +35,8 @@ public class FXML_DisplayNilaiController implements Initializable {
 
     @FXML
     private TableView<NilaiModel> tbvnilai;
+    @FXML
+    private TextField txtTotal;
     @FXML
     private Button btnAwal;
     @FXML
@@ -172,7 +174,18 @@ public class FXML_DisplayNilaiController implements Initializable {
             col.setCellValueFactory(new PropertyValueFactory<NilaiModel, Integer>("Hadir"));
             tbvnilai.getColumns().addAll(col);
             
+            col = new TableColumn("NA");
+            col.setCellValueFactory(new PropertyValueFactory<NilaiModel, String>("na"));
+            tbvnilai.getColumns().addAll(col);
+            
             tbvnilai.setItems(data);
+            
+            int total = 0;
+            for(int i = 0; i<tbvnilai.getItems().size();i++){
+                NilaiModel n = tbvnilai.getItems().get(i);
+                total+=n.getHadir();
+            }
+            txtTotal.setText(String.valueOf(total));
         } else {
             Alert a = new Alert(Alert.AlertType.ERROR, "Data Kosong", ButtonType.OK);
             a.showAndWait();

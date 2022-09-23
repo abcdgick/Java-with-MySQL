@@ -15,6 +15,16 @@ public class NilaiModel {
     private Date Tanggal;
     private float Nilai;
     private int Hadir;
+    private char na;
+
+    public char getNa() {
+        if(Nilai>=85) na = 'A';
+        else if(Nilai>=75) na = 'B';
+        else if(Nilai>=60) na = 'C';
+        else if(Nilai>=40) na='D';
+        else na='E';
+        return(na);
+    }
 
     public String getNpm() {
         return Npm;
