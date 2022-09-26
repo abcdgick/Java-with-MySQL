@@ -119,4 +119,28 @@ public class DBSiswa {
             return berhasil;
         }
     }
+    
+    public ObservableList<SiswaModel> LookUp(String fld, String dt){
+        try {
+            ObservableList<SiswaModel> tableData = FXCollections.observableArrayList();
+            Koneksi con = new Koneksi();
+            con.bukaKoneksi();
+            con.statement = con.dbKoneksi.createStatement();
+            ResultSet rs = con.statement.executeQuery("Select Npm, Nama, Alamat from siswa where "+fld+" like '%"+dt+"%'");
+            int i = 1;
+            while (rs.next()){
+                SiswaModel d = new SiswaModel();
+                d.setNpm(rs.getString("Npm"));
+                d.setNama(rs.getString("Nama"));
+                d.setAlamat(rs.getString("Alamat"));
+                tableData.add(d);
+                i++;
+            }
+            con.tutupKoneksi();
+            return tableData;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 }
