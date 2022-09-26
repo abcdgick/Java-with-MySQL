@@ -43,6 +43,7 @@
       <DatePicker fx:id="dateTanggal" layoutX="271.0" layoutY="150.0" prefHeight="25.0" prefWidth="149.0" />
       <Slider fx:id="sldHadir" layoutX="271.0" layoutY="256.0" prefHeight="14.0" prefWidth="149.0" />
       <Label fx:id="lblHadir" layoutX="431.0" layoutY="254.0" text="0" />
-      <Button fx:id="btnPilih" layoutX="470.0" layoutY="50.0" mnemonicParsing="false" onAction="#pilihKlik" text="Pilih Siswa" />
+      <Button fx:id="btnPilihS" layoutX="470.0" layoutY="50.0" mnemonicParsing="false" onAction="#pilihSKlik" prefHeight="25.0" prefWidth="79.0" text="Pilih Siswa" />
+      <Button fx:id="btnPilihM" layoutX="470.0" layoutY="100.0" mnemonicParsing="false" onAction="#pilhMKlik" text="Pilih Matkul" />
    </children>
 </AnchorPane>

@@ -123,4 +123,28 @@ public class DBMatkul {
             return berhasil;
         }
     }
+    
+    public ObservableList<MatkulModel> LookUp(String fld, String dt){
+        try {
+            ObservableList<MatkulModel> tableData = FXCollections.observableArrayList();
+            Koneksi con = new Koneksi();
+            con.bukaKoneksi();
+            con.statement = con.dbKoneksi.createStatement();
+            ResultSet rs = con.statement.executeQuery("Select KodeMK, NamaMK, Sks, Praktek from matakuliah where "+fld+" like '%"+dt+"%'");
+            int i = 1;
+            while(rs.next()){
+                MatkulModel d = new MatkulModel();
+                d.setKodeMK(rs.getString("KodeMK"));
+                d.setNamaMK(rs.getString("NamaMK"));
+                d.setPraktek(rs.getInt("Praktek"));
+                d.setSks(rs.getInt("Sks"));
+                i++;
+            }
+            con.tutupKoneksi();
+            return tableData;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 }

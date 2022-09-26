@@ -55,7 +55,9 @@ public class FXML_InputNilaiController implements Initializable {
     
     private boolean editData = false;
     @FXML
-    private Button btnPilih;
+    private Button btnPilihS;
+    @FXML
+    private Button btnPilihM;
 
 
     /**
@@ -137,7 +139,7 @@ public class FXML_InputNilaiController implements Initializable {
     }
 
     @FXML
-    private void pilihKlik(ActionEvent event) {
+    private void pilihSKlik(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML_PilihSiswa.fxml"));
             Parent root = (Parent)loader.load();
@@ -153,7 +155,25 @@ public class FXML_InputNilaiController implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    
+    }
+
+    @FXML
+    private void pilhMKlik(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML_PilihMatkul.fxml"));
+            Parent root = (Parent)loader.load();
+            FXML_PilihMatkulController isidt = (FXML_PilihMatkulController)loader.getController();
+            Scene scene = new Scene(root);
+            Stage stg = new Stage();
+            stg.initModality(Modality.APPLICATION_MODAL);
+            stg.setResizable(false);
+            stg.setIconified(false);
+            stg.setScene(scene);
+            stg.showAndWait();
+            if(isidt.getHasil()==1) txtKodeMK.setText(isidt.getKode());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     
 }
