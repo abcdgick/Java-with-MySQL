@@ -11,10 +11,10 @@ import java.sql.Date;
  * @author acer
  */
 public class NilaiModel {
-    private String Npm, KodeMk;
+    private String Npm, KodeMk, NamaSiswa, NamaMK;
     private Date Tanggal;
     private float Nilai;
-    private int Hadir;
+    private int Hadir, Sks, Praktek;
     private char na;
 
     public char getNa() {
@@ -64,5 +64,37 @@ public class NilaiModel {
 
     public void setHadir(int Hadir) {
         this.Hadir = Hadir;
+    }
+    
+    public String getNamaSiswa() {
+        return NamaSiswa;
+    }
+
+    public void setNamaSiswa(String NamaSiswa) {
+        this.NamaSiswa = NamaSiswa;
+    }
+    
+    public String getNamaMK() {
+        return NamaMK;
+    }
+
+    public void setNamaMK(String NamaMK) {
+        this.NamaMK = NamaMK;
+    }
+
+    public int getSks() {
+        return Sks;
+    }
+
+    public void setSks(int Sks) {
+        this.Sks = Sks;
+    }
+
+    public int getPraktek() {
+        return Praktek;
+    }
+
+    public void setPraktek(int Praktek) {
+        this.Praktek = Praktek;
     }
 }
