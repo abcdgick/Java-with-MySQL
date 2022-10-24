@@ -95,7 +95,6 @@ public class FXML_DisplayMatkulController implements Initializable {
             stg.setScene(scene);
             stg.showAndWait();
         } catch (IOException e) {
-            e.printStackTrace();
         }
         showData();
         awalKlik(event);
